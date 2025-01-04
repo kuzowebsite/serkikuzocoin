@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Public+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wdth@89.7&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loft.css">
+    <link rel="stylesheet" href="hambuger.css">
+    <title>Дэлхийн хамгийн найдвартай криптовалютын хөрөнгө оруулалтын платформ</title>
+    <link rel="icon" href="/Images/favico.ico">
+</head>
+<body class="thirdwave opensans">
+    <!--Tawk.to Script эхлэээл байгааа би хэлэээл байгааа API холбож дуудсан байгаа CHATGPT гээс асуугаарай тайлбарлуулаад-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/60761301f7ce1827093a1d7f/1f36jkg0m';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--Tawk.to Script дуусаж баййна-->
+
+   <!------ screen шүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүүү-->
+
+    <header class="lg:block hidden">
+        <div class="flex justify-between items-center w-full">
+
+           <a href="Home.html"> <div class="flex justify-between items-center w-1/12 pl-20">
+                <div class="">
+                    <svg class="w-20 h-14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="186.847" height="214.403" viewBox="0 0 186.847 214.403">
+                        <defs>
+                        <linearGradient id="linear-gradient" x1="0.5" x2="0.382" y2="0.084" gradientUnits="objectBoundingBox">
+                            <stop offset="0" stop-color="#e4af00"/>
+                            <stop offset="1" stop-color="#b18900"/>
+                        </linearGradient>
+                        </defs>
+                        <g id="Group_5" data-name="Group 5" transform="translate(-16.964 -140.856) rotate(-1)">
+                        <g id="Group_2" data-name="Group 2" transform="translate(12.429 224.859) rotate(-40)">
+                            <path id="Subtraction_6" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+                            <path id="Path_1" data-name="Path 1" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                        </g>
+                        <g id="Group_3" data-name="Group 3" transform="translate(199.654 275.032) rotate(140)">
+                            <path id="Subtraction_6-2" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+                            <path id="Path_2" data-name="Path 2" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                        </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="text-2xl font-semibold text-white publicsans burron texto">Coinloft</div>
+            </div></a>
+    
+    
+                <div class="overpass text-white gap-7 flex justify-between items-center text-lg pr-20">
+                    <a href="Home.html"><div class="textohov newsticky"> Нүүр</div></a>
+                    <a href="Home.html"><div class="textohov newsticky"> Заавар</div></a>
+                    <a href="Loan.html"><div class="textohov newsticky"> Зээл</div></a>
+                    <a href="About.html"><div class="textohov newsticky"> Бидний тухай</div></a>
+                    <a href="Contact.html"><div class="navico newsticky"> Холбоо барих</div></a>
+                    <a href="Login.html"><button class="burron publicsans px-4 py-1 rounded">НЭВТРЭХ</button></a>
+                </div>
+      </div>
+
+      <div style="height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 0px; text-align: right; line-height:14px; block-size:36px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:0;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 0 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">powered</a>&nbsp;by Coinloft</div></div>
+    
+    </header>
+
+           <!-------MObile эхлэж байна-------->
+    <section class=" lg:hidden block">
+        <div class="topper">
+            <div class="flex items-center w-7/12 mt-3 gdown">
+
+                <div class="w-4/12 pb-2 -mt-2 text-blue-900"> <img class="w-60 h-20" src="/images/toplogo.png" alt="logo">.</div>
+                    
+                <a href="Home.html"><div class="text-2xl -mt-12 -ml-6 font-semibold text-white publicsans burron texto">Coinloft</div></a>
+            </div>
+         
+        
+          <input type="checkbox" id="openSideMenu" class="openSideMenu">
+          <label for="openSideMenu" class="menuIconToggle">
+            <div class="hamb-line dia part-1"></div>
+            <div class="hamb-line hor"></div>
+            <div class="hamb-line dia part-2"></div>
+          </label>
+          <nav  class="holder">
+            <ul>
+                <a href="Home.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Нүүр</div></a>
+                <a href="#How it works"><div id="remo" class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Заавар</div></a>
+                <a href="Loan.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Зээл</div></a>
+                <a href="About.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Бидний тухай</div></a>
+                <a href="Contact.html"><div class="navico newsticky text-lg border-b border-blue-900 pt-3"> Холбоо барих</div></a>
+                <a href="Login.html"><button class="mt-4 burron publicsans text-white px-4 py-1 rounded">НЭВТРЭХ</button></a>
+            </ul>
+            <div class="nabfoot absolute bottom-0 right-24">
+                <h1 class="ml-14">
+                <i class="text-gray-400 hover:text-red-500 fab fa-twitter"></i>
+                <i class="text-gray-400 hover:text-red-500 fab fa-facebook"></i>
+                </h1>
+              <p class="text-gray-300">Serikbai, KuZo | &copy; 2025</p>
+              </div>
+          </nav>
+      
+          <h1 class="text-4xl text-black pt-5">.</h1>
+          <div style="height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 0px; text-align: right; line-height:14px; block-size:36px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:0;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 0 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">powered</a>&nbsp;by Coinloft</div></div>
+    </section>
+
+
+    
+    <div class="banner lg:h-28 md:h-0 pt-20"></div>
+   
+   <section class="contact  bg-blue-100">
+        <div class="h-auto pt-6 pb-28 lg:w-10/12 w-11/12 mx-auto">
+
+          <div class="w-full pb-4 xl:px-28 px-auto">
+            <h1 class="sm:text-3xl text-2xl mb-1 opensans font-semibold text-blue-900">Холбоо барих</h1>
+
+            <p class="">Бид таны санал, асуултанд хариулахдаа баяртай байх болно, whether it's about features, pricing, loans or anything else. Манай баг таны бүх асуултад хариулахад үргэлж бэлэн байна.
+            </p>
+          </div>
+
+
+
+                        <div class="alert animate__animated animate__backInLeft animate__faster py-4 bg-green-400 text-white lg:w-3/12 md:w-4/12 w-8/12 absolute top-60 left-0 text-center border border-current hidden">Таны мэссеж илгээлээ!</div>
+
+            <div class="lg:w-10/12 w-full mx-auto flex md:flex-row flex-col justify-between gap-6 items-start">
+
+                <div class="lg:w-6/12 w-full">
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Бүтэн нэрийг оруулна уу" class="py-2 px-3 focus:outline-none w-full m-auto bg-white text-black " required>
+                        <input type="text" id="company" placeholder="Компаниа оруулна уу (заавал биш)" class="mt-4 py-2 px-3 focus:outline-none w-full m-auto bg-white text-black">
+                        <input type="email" id="email" placeholder="имэйл" class="mt-4 py-2 px-3 focus:outline-none w-full m-auto bg-white text-black" required>
+                        <input type="text" id="phone" placeholder="утас" class="mt-4 py-2 px-3 focus:outline-none w-full m-auto bg-white text-black">
+                        <textarea name="message" id="message" class="w-full mt-6 focus:outline-none" rows="5"></textarea>
+                        <input type="submit" class="mt-6 conti-btn py-2 px-2 w-full bg-black text-white" value="ИЛГЭЭХ">
+                    </form>
+                </div>
+            
+                <div class="lg:w-6/12 w-full">
+
+                    <div class="conti text-white px-5 pb-10 pt-6">
+                        <a href="https://api.whatsapp.com/send/?phone=+2348108243267&text=I%27m+contacting+you+from+coinloft.net&app_absent=0"><h1  class="text-lg hover:text-yellow-300"><i class="fab fa-whatsapp"></i> +976 80901860</h1></a>
+                        <a href="https://www.gmail.com"><h1 class="text-lg py-3 hover:text-yellow-300"><i class="far fa-envelope "></i> m.batireedui@ider.edu.mn</h1></a>
+                        <a href="https://www.gmail.com"><h1 class="text-lg py-3 hover:text-yellow-300"><i class="far fa-envelope "></i> b.serikbai@ider.edu.mn</h1></a>
+                        <a target="_blank" href="https://twitter.com/Emmy31087589"><h1 class="text-lg hover:text-yellow-300"><i class="fab fa-twitter"></i> S_K</h1></a>
+
+                        <div class="w-full mx-auto neu my-2">
+                            <img class="w-52 h-52 mx-auto" src="/images/callcont.png" alt="callcenter">
+                        </div>
+
+                        <p class="text-3x1 text-center">Вэб сайтын шууд чатлах боломжтой</p>
+
+                    </div>
+
+
+                   
+
+                </div>
+        
+            </div>
+
+
+
+        </div>
+   </section>
+
+    
+
+    
+
+
+    <footer class="footershape relative md:pb-0 pb-56 overflow-hidden">
+
+        <div class="flex justify-between opacity-30">
+            <img src="/images/wmap.png" alt="trans-bg">
+            <img src="/images/wmap.png" alt="trans-bg">
+        </div>
+
+
+        <div class="absolute md:top-24 top-10 xl:48 md:left-20 sm:left-12 left-5 flex md:flex-row flex-col justify-around items-start w-10/12 mx-auto text-white">
+
+            <div class="md:w-3/12 w-full">
+                <a href="Home.html"> <div class="flex justify-between items-center w-1/12 pl-20">
+                    <div class="">
+                        <svg class="w-20 h-14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="186.847" height="214.403" viewBox="0 0 186.847 214.403">
+                            <defs>
+                            <linearGradient id="linear-gradient" x1="0.5" x2="0.382" y2="0.084" gradientUnits="objectBoundingBox">
+                                <stop offset="0" stop-color="#e4af00"/>
+                                <stop offset="1" stop-color="#b18900"/>
+                            </linearGradient>
+                            </defs>
+                            <g id="Group_5" data-name="Group 5" transform="translate(-16.964 -140.856) rotate(-1)">
+                            <g id="Group_2" data-name="Group 2" transform="translate(12.429 224.859) rotate(-40)">
+                                <path id="Subtraction_6" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+                                <path id="Path_1" data-name="Path 1" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                            </g>
+                            <g id="Group_3" data-name="Group 3" transform="translate(199.654 275.032) rotate(140)">
+                                <path id="Subtraction_6-2" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+                                <path id="Path_2" data-name="Path 2" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                            </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-2xl font-semibold text-white publicsans burron texto">Coinloft</div>
+                </div></a>
+
+                <p class="md:ml-12 text-lg md:leading-normal leading-tight">
+                    "Бид хөрөнгө оруулалт хийхдээ хөрөнгийн өсөлт болон санхүүгийн эрсдлийг бууруулах зарчимд үнэнч байдаг."
+                </p>
+            </div>
+
+            
+            <div class="md:w-3/12 w-full text-lg">
+                <h1 class="md:text-2xl text-xl md:mt-0 mt-3 pb-3 font-semibold">Холбоосууд</h1>
+
+               <p class="border-b border-yellow-600 w-3/12 md:mb-6 mb-2">
+
+                <a href="Login.html"><div class="publicsans md:text-xl text-base transition-all duration-200 ease-in-out hover:text-yellow-600">Нэвтрэх</div></a>
+                <a href="Signup.html"><div class="py-3 publicsans md:text-xl text-base transition-all duration-200 ease-in-out hover:text-yellow-600">Бүртгэл үүсгэх</div></a>
+                <a href="Login.html"><div class="publicsans md:text-xl text-base transition-all duration-200 ease-in-out hover:text-yellow-600">Нууц үгээ мартсан</div></a>
+            </div>
+
+
+            <div class="md:w-3/12 w-full text-lg">
+                <h1 class="tmd:text-2xl text-xl md:mt-0 mt-5 pb-3 font-semibold">Бусад холбоосууд</h1>
+
+               <p class="border-b border-yellow-600 w-3/12 md:mb-6 mb-2">
+
+                <a href="Privacypolicy.html"><div class="pb-2 publicsans md:text-xl text-base transition-all duration-200 ease-in-out hover:text-yellow-600">Нөхцөл & Шаардлага</div></a>
+                <a href="Privacypolicy.html"><div class="publicsans md:text-xl text-base transition-all duration-200 ease-in-out hover:text-yellow-600 ">Нууцлалын бодлого</div></a>
+                <div id="google_translate_element" class="w-12 absolute opacity-70 mx-auto text-white"></div>
+            </div>
+
+        </div>
+    </footer> 
+    
+    <section class="copyright copyr h-12 text-gray-500 text-center w-full" >
+        <p class="sm:text-base text-xs pt-3">Copyrights &copy; Бүх эрх хуулиар хамгаалагдсан, 2025 | Serikbai, KuZo зохион бүтээсэн</p>
+    </section>
+
+    <script>
+        
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+          </script>
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          
+    
+    <script>
+    
+        // Firebase ахиад л холбож байна
+ var firebaseConfig = {
+   apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+   authDomain: "form-a2fa1.firebaseapp.com",
+   projectId: "form-a2fa1",
+   storageBucket: "form-a2fa1.appspot.com",
+   messagingSenderId: "195902252855",
+   appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+ };
+ // Firebase холболт
+ firebase.initializeApp(firebaseConfig);
+
+   // messages-үүд
+   
+   var messagesRef = firebase.database().ref("messages");
+
+
+
+   //Маягт илгээх хэсэг
+   document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+   function submitForm(e){
+       e.preventDefault();
+       
+       let name = getInputVal('name');
+       let company = getInputVal('company');
+       let email = getInputVal('email');
+       let phone = getInputVal('phone');
+       let message = getInputVal('message');
+
+       //зурвас хадгалах хэсэг
+       saveMessage(name, company, email, phone, message);
+
+        //Сэрэмжлүүлэг харуулах хэсэг шүү
+       document.querySelector('.alert').style.display = 'block';
+
+       //нуухаар ​​тохируулсан энд анда
+
+       setTimeout(function(){
+           document.querySelector('.alert').style.display = 'none';
+       },3000);
+
+     
+         //Clear Form
+       document.getElementById('contactForm').reset();
+       
+
+
+   }
+
+    
+
+   //маягтын утгыг авах функц энд байна энэ их чухал шүүү анда
+   function getInputVal(id){
+       return document.getElementById(id).value;
+   }
+
+
+   
+   
+   //firebase руу хадгалах
+   function saveMessage(name, company, email, phone, message){
+       var newMessageRef = messagesRef.push();
+       newMessageRef.set({
+           name:name,
+           company: company,
+           email:email,
+           phone:phone,
+           message:message,
+
+       });
+   }
+
+
+
+   </script>
+
+
+    
+    <script src="loft.js"></script>
+    <script src="heroslider.js"></script>
+</body>
+</html>

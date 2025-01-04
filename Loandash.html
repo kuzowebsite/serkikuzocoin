@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <!-- Firebase JS SDK холбсон хэсэг -->
+ <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- <link rel="stylesheet" href="loft.css"> -->
+    <link rel="stylesheet" href="Dashcss.css">
+    <title>Дэлхийн хамгийн найдвартай криптовалютын хөрөнгө оруулалтын платформ</title>
+    <link rel="icon" href="/Images/favico.ico">
+  </head>
+<body class="budy">
+
+
+      <!-------topnav хэсэг эхлэж байна-------->
+      <section class="">
+        <div class="topper">
+           <div class="flex justify-center items-center lg:-ml-10 sm:ml-0 ml-8  md:w-1/12 md:w-3/12 w-3/12 mt-6 gdown">             
+
+                <a href="Home.html"><div class="">
+                    <svg class="w-20 h-14 -mt-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="186.847" height="214.403" viewBox="0 0 186.847 214.403">
+                        <defs>
+                        <linearGradient id="linear-gradient" x1="0.5" x2="0.382" y2="0.084" gradientUnits="objectBoundingBox">
+                            <stop offset="0" stop-color="#e4af00"/>
+                            <stop offset="1" stop-color="#b18900"/>
+                        </linearGradient>
+                        </defs>
+                        <g id="Group_5" data-name="Group 5" transform="translate(-16.964 -140.856) rotate(-1)">
+                        <g id="Group_2" data-name="Group 2" transform="translate(12.429 224.859) rotate(-40)">
+                            <path id="Subtraction_6" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+                            <path id="Path_1" data-name="Path 1" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                        </g>
+                        <g id="Group_3" data-name="Group 3" transform="translate(199.654 275.032) rotate(140)">
+                            <path id="Subtraction_6-2" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+                            <path id="Path_2" data-name="Path 2" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                        </g>
+                        </g>
+                    </svg>
+                </div></a>
+                    
+                <a href="Home.html"><div class="text-2xl -mt-2 -ml-3 font-semibold text-white publicsans burron texto">Coinloft</div></a> 
+                <div class="lg:block hidden text-white text-xl text-green-500 cursor-pointer absolute top-8 right-80"><i class="far fa-bell"></i></div>         
+                <div id="fmail" class="lg:block hidden text-white absolute text-lg top-8 right-16 overflow-hidden"></div>                  
+            </div>
+
+           
+         <!---screen дэлгэц эхлэж байна-->
+        <div class="lg:hidden block ">
+          <input type="checkbox" id="openSideMenu" class="openSideMenu">
+          <label for="openSideMenu" class="menuIconToggle mt-2">
+            <div class="hamb-line dia part-1"></div>
+            <div class="hamb-line hor"></div>
+            <div class="hamb-line dia part-2"></div>
+          </label>
+          <div class="berro text-green-500 absolute cursor-pointer text-xl right-20 top-7 "><i class="far fa-bell"></i></div> 
+          <nav>
+            <ul>
+                <a href="Dashboard.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-door-open"></i>
+                    <h1 class="text-lg">Хяналтын самбар</h1>
+                </div></a>
+    
+                <a href="Account.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                 <i class="fas text-blue-700 text-xl far fa-user"></i>
+                    <h1 class="text-lg">Данс</h1>
+                </div></a>
+    
+                <a href="Transactions.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-coins"></i>
+                    <h1 class="text-lg">Гүйлгээ</h1>
+                </div></a>
+    
+                <a href="Investments.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-wallet"></i>
+                    <h1 class="text-lg">Хөрөнгө оруулалт</h1>
+                </div></a>
+    
+                <a href="Loandash.html"><div class="flex gap-4 py-3 bg-white font-medium px-3 mr-4 newneu items-start rounded">  
+                    <i class="text-xl  fas fa-money-check-alt"></i>
+                    <h1 class="text-lg">Зээл <span class="text-pink-400 text-xs">(new)</span></h1>
+                </div></a>
+    
+                <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-cog"></i>
+                    <h1 class="text-lg">Тохиргоо</h1>
+                </div></a>
+    
+                <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
+                    <h1 class="text-lg">Гарах</h1>
+                </div>
+            </ul>
+            <div class="nabfoot absolute bottom-0 right-24">
+                <h1 class="ml-14">
+                <i class="text-gray-400 hover:text-red-500 fab fa-twitter"></i>
+                <i class="text-gray-400 hover:text-red-500 fab fa-facebook"></i>
+                </h1>
+              <p class="text-gray-300">Serikbai, KuZo | &copy; 2025</p>
+              </div>
+          </nav>
+        </div>
+    </section>
+
+    <!------------------------ Хажуугийн самбар хэсэг -------------------------->
+
+    <section class="h-screen w-3/12 fixed basecolor border-r lg:block hidden pt-20">
+        <div class="w-11/12 mx-auto mt-8">
+
+            <a href="Dashboard.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-door-open"></i>
+                <h1 class="text-lg">Хяналтын самбар</h1>
+            </div></a>
+
+            <a href="Account.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+             <i class="fas  text-blue-700 text-xl far fa-user"></i>
+                <h1 class="text-lg">Данс</h1>
+            </div></a>
+
+            <a href="Transactions.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-coins"></i>
+                <h1 class="text-lg">Гүйлгээ</h1>
+            </div></a>
+
+            <a href="Investments.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-wallet"></i>
+                <h1 class="text-lg">Хөрөнгө оруулалт</h1>
+            </div></a>
+
+            <a href="Loandash.html"><div class="flex gap-4 py-3 mt-3 bg-white font-medium px-3 newneu items-start rounded">  
+                <i class="text-xl  fas fa-money-check-alt"></i>
+                <h1 class="text-lg">Зээл <span class="text-pink-400 text-xs">(new)</span></h1>
+            </div></a>
+
+            <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-cog"></i>
+                <h1 class="text-lg">Тохиргоо</h1>
+            </div></a>
+
+            <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
+                <h1 class="text-lg">Гарах</h1>
+            </div>
+                        
+
+        </div>
+    </section>
+
+    <section class="md:h-screen lg:h-auto h-auto transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
+             
+        <h1 class="sm:text-3xl text-2xl mt-6 overpass">Welcome To Loans</h1>
+
+        <p class="pt-2 pb-6 sm:w-11/12 w-full mx-auto opensans">Зээлийн хүсэлтийг батлахад 2-3 хоног хүртэл хугацаа шаардагдаж болзошгүй. Эцсийн батламжид нөлөөлөх чухал хүчин зүйл болох тул мэдээллээ үнэн зөвөөр бөглөн үү. </p>
+       
+        <div class="relative overflow-hidden flex md:flex-row flex-col pb-20 md:gap-0 gap-8">
+            <div class="md:w-6/12 mx-auto w-full keke border">
+                <div class="flex py-7 w-11/12 mx-auto justify-between px-4 bg-blue-50 mt-3 rounded">
+                    <p>Зээлийн багцын үлдэгдэл</p>
+                    <p class="numb text-3xl">$1000.00</p>
+                </div>
+
+                <div class=" mt-10">
+                    <p class="text-xl font-medium pl-2 pb-1">Зээлийн түүх</p>
+
+                    <article class="about">
+     
+                        <div class="mx-auto md:gap-0 gap-4 items-start px-3 py-5 border bg-grey-100">
+                            <div class="flex  justify-around w-full">
+                                <div class="md:py-3 py-1 rounded-full cursor-pointer bg-white font-medium md:px-7 px-2 text-green-500 border border-green-700 tab-btn active" data-id="history">Хүлээн авсан</div>
+                                <div class="md:py-3 py-1 rounded-full cursor-pointer bg-white font-medium md:px-4 px-1 text-red-500 border border-red-700 tab-btn" data-id="vision">Татан авалт</div>
+                                <div class="md:py-3 py-1 rounded-full cursor-pointer bg-white font-medium md:px-7 px-2 text-yellow-400 border border-yellow-700 tab-btn" data-id="goals">Буцаан олголт</div>
+                            </div>
+                    
+                          <div class="about-content">
+
+                           <div class="content active py-6" id="history">
+                              
+                                <div class="flex justify-between text-xl font-medium">
+                                    <p class="md:block hidden sm:text-xl text-base">Гүйлгээний ID</p>
+                                    <p class="md:hidden block text-base">Trx ID</p>
+                                    <p class="-ml-8 sm:text-xl text-base">Огноо</p>
+                                    <p class="sm:text-xl text-base">Дүн</p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                            </div>
+                           
+                <!---Таталт авах хэсэг-->
+                            <div class="content py-6" id="vision">
+                                <div class="flex justify-between text-xl font-medium">
+                                    <p class="md:block hidden sm:text-xl text-base">Гүйлгээний ID</p>
+                                    <p class="md:hidden block text-base">Trx ID</p>
+                                    <p class="-ml-8 sm:text-xl text-base">Огноо</p>
+                                    <p class="sm:text-xl text-base">Дүн</p>
+                                </div>
+
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                            </div>
+                          
+                            <div class="content py-6" id="goals">
+                                <div class="flex justify-between text-xl font-medium">
+                                    <p class="md:block hidden sm:text-xl text-base">Гүйлгээний ID</p>
+                                    <p class="md:hidden block text-base">Trx ID</p>
+                                    <p class="-ml-8 sm:text-xl text-base">Огноо</p>
+                                    <p class="sm:text-xl text-base">Дүн</p>
+                                </div>
+
+                                <div class="flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    Хүснэгтэнд өгөгдөл байхгүй
+                                </div>
+                            </div>
+
+                        </div>
+                        </article>
+
+
+                    <!---дууслаааа гэж-->
+                </div>
+                
+            </div>
+
+
+            <form id="loner" class="overflow-hidden relative md:w-5/12 w-full sm:mt-0 mx-auto p-3 keke border">
+
+                <h1 class="text-2xl text-center pb-3 ">Зээлийн хүсэлтийн маягт</h1>
+
+                <div id="success-alert" class="bg-blue-50 border-current hidden rounded animate__faster border bg-white text-lg px-4 absolute top-2 right-0 py-10 animate__slideInRight animate__animated animate__delay-4s">
+                    <p class="2xl">Баяр хүргэе! Таны зээлийн хүсэлтийг амжилттай илгээлээ. Баталгаажуулахын тулд имэйлээ шалгана уу!</p>
+                </div>
+
+                <label>Таны ажлын байрын байдал юу вэ?</label>
+                    <select required id="selio" class="focus:outline-none rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                        <option class="text-yellow-600" value="Select">Сонго...</option>
+                        <option class="text-yellow-600" value="Employed">Ажилтай</option>
+                        <option class="text-yellow-600" value="Self Employed">Хувиараа хөдөлмөр эрхэлдэг</option>
+                    </select>
+
+                    <div class="my-3">
+                        <label>Зээлийн төрлийг сонгоно уу</label>
+                        <select required id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                            <option id="loan-S" class="text-yellow-600" value="Select">Сонго...</option>
+                            <option id="loan-I" class="text-yellow-600" value="Loan-Invest">Зээл-Хөрөнгө оруулалт</option>
+                            <option id="loan-O" class="text-yellow-600" value="Loan-Out">Зээл олгох</option>
+                        </select>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <div>
+                            <label class="sm:block hidden">Сарын орлогын хүрээ?</label>
+                            <label class="sm:hidden block">Сарын орлого?</label>
+                            <input id="mnt-income" type="text" class="px-2 focus:outline-none rounded w-full border border-blue-200 py-2"required>
+                        </div>
+
+                        <div>
+                            <label>Имэйл</label>
+                            <input required id="lnMail" type="email" class="px-2 focus:outline-none rounded w-full border border-blue-200 py-2">
+                        </div>
+                    </div>
+                
+
+
+                    <div class="flex gap-2 my-3">
+                        <div>
+                            <label>Улсаа оруулан уу?</label>
+                            <input required id="country" type="text" class=" px-2 focus:outline-none rounded w-full border border-blue-200 py-2">
+                        </div>
+                        <div>
+                            <label>Хотоо оруулан уу?</label>
+                            <input required id="city" type="text" class="px-2 focus:outline-none rounded w-full border border-blue-200 py-2">
+                        </div>
+
+                    </div>
+
+
+                    <div class="my-4">
+                        <select required id="loanAmount" class="hidden focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                            <option class="font-medium" value="Select">Зээлийн хэмжээг сонгоно уу</option>
+                            <option class="text-yellow-700" value="$500">$500</option>
+                            <option class="text-yellow-700" value="$1000">$1000</option>
+                            <option class="text-yellow-700" value="$1500">$1,500</option>
+                            <option class="text-yellow-700" value="$5,000">$5,000</option>
+                            <option class="text-yellow-700" value="$10,000">$10,000</option>
+                            <option class="text-yellow-700" value="$15,000">$15,000</option>
+                            <option class="text-yellow-700" value="$25,000">$25,000</option>                      
+                        </select>
+                    </div>
+
+                    <div class="my-4">
+                        <select required id="loanAmount-2" class="hidden focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                            <option class="font-medium" value="Select">Зээлийн хэмжээг сонгоно уу (lO)</option>
+                            <option class="text-yellow-700" value="$500">$500</option>
+                            <option class="text-yellow-700" value="$1000">$1000</option>
+                            <option class="text-yellow-700" value="$1500">$1,500</option>
+                            <option class="text-yellow-700" value="$5,000">$5,000</option>
+                            <option class="text-yellow-700" value="$10,000">$10,000</option>                  
+                        </select>
+                    </div>
+
+
+                    <label>Төрсөн огноогоо бичнэ үү</label>
+                    <div class="flex gap-2">
+                        <input required id="datee" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="DD">
+                        <input required id="monthEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="MM">
+                        <input required id="yearEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="YYYY">
+
+                    </div>
+                
+                    <div id="government" class="hidden">
+                        <h1 class="text-base mt-6 mb-3">Засгийн газраас олгосон үнэмлэхийг байршуулна уу</h1>
+                        <div class="mx-auto">
+                            <div class="flex justify-center mb-12">
+                                    <input type="file" name="" id="photo">
+                                    <img class="w-32 border-none" id="image">
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <button onclick="uploadImage()" class="w-full mt-6 py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">ЗЭЭЛ ХҮСЭХ</button>
+
+                <!-- <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="ҮРГЭЛЖЛҮҮЛЭХ" type="submit"> -->
+
+                <div id="formiload" class="fifi hidden">
+                    <img class="w-40 mx-auto" src="https://28r0ml3w463qs2tkk26kwd5e-wpengine.netdna-ssl.com/wp-content/themes/RouRealty/assets/images/ajax-loader.gif">
+                </div>
+            </form>
+            
+            
+        </div>
+
+
+        
+       
+
+
+
+
+        <div class="hidden notif absolute top-1 md:right-60 right-16 bg-white w-68 py-6 px-3 rounded border text-black">
+            Танд уншаагүй мэдэгдэл алга   
+        </div>
+
+        <section class="left-0 absolute bottom-0 copyright bg-gray-200 py-2 text-gray-500 text-center w-full" >
+            <p class="text-xs pt-3">Copyrights &copy; Бүх эрх хуулиар хамгаалагдсан, 2025 | KuZo, Serikbai зохион бүтээсэн</p>
+        </section>
+    </section>
+   
+
+
+
+
+    <script>
+        const about = document.querySelector(".about");
+        const btns = document.querySelectorAll(".tab-btn");
+        const articles = document.querySelectorAll(".content");
+        about.addEventListener("click", function (e) {
+        const id = e.target.dataset.id;
+        if (id) {
+            // бусад товчлууруудаас сонгогдсоныг устгах хэсэг андаа энэ бас чухал хэсгийн нэг
+            btns.forEach(function (btn) {
+            btn.classList.remove("active");
+            });
+            e.target.classList.add("active");
+            // бусад нийтлэлүүдийг нуух хэсэг гар утас хэсэг рүү шилжих хэсэгт
+            articles.forEach(function (article) {
+            article.classList.remove("active");
+            });
+            const element = document.getElementById(id);
+            element.classList.add("active");
+        }
+        });
+
+    </script>
+
+
+    <script>
+        document.getElementById('loantype').addEventListener('click', showieHide);
+        function showieHide() {
+            if(document.getElementById('loantype').value === "Loan-Invest"){
+                document.getElementById('loanAmount-2').style.display = "none";
+                document.getElementById('loanAmount').style.display = "block";
+                document.getElementById('government').style.display = "none";
+            } 
+            if (document.getElementById('loantype').value === "Loan-Out"){
+                document.getElementById('loanAmount').style.display = "none";
+                document.getElementById('loanAmount-2').style.display = "block";
+                document.getElementById('government').style.display = "block";
+            } 
+            if (document.getElementById('loantype').value === "Select"){
+                document.getElementById('loanAmount').style.display = "none";
+                document.getElementById('loanAmount-2').style.display = "none";
+                document.getElementById('government').style.display = "none";
+            } 
+        }
+    </script>
+
+
+    <script>
+  // Firebase холбсон хэсэг
+  var firebaseConfig = {
+    apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+    authDomain: "form-a2fa1.firebaseapp.com",
+    projectId: "form-a2fa1",
+    storageBucket: "form-a2fa1.appspot.com",
+    messagingSenderId: "195902252855",
+    appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+  };
+    // Firebase холбсон хэсэг
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+  
+    const loaneeDetails = firebase.database().ref("Loan-Form");
+
+
+    function uploadImage() {
+       const ref = firebase.storage().ref()
+
+       const file = document.querySelector('#photo').files[0]
+
+       const name = new Date() + '-' + file.name
+
+       const metadata = {
+           contentType:file.type
+       }
+
+       const task = ref.child(name).put(file,metadata)
+
+       task
+       .then(snapshot => snapshot.ref.getDownloadURL())
+       .then(url => {
+           console.log(url)
+
+           document.getElementById('depo-suc').style.display = "block";
+            setTimeout(function() {
+                document.getElementById('depo-suc').style.display = "none";
+            }, 4000)
+
+           const image = document.querySelector('#image')
+           image.src = url
+       })
+   }
+
+
+     
+    document.getElementById('loner').addEventListener('submit', giveAm);
+        function giveAm(e) {
+            e.preventDefault();
+            const mifo = document.getElementById('selio').value;
+            const loanType = document.getElementById('loantype').value;
+            const loanAmount = document.getElementById('loanAmount').value;
+            const loanAmount2 = document.getElementById('loanAmount-2').value;
+            const incomeMnt = document.getElementById('mnt-income').value;
+            const countryi = document.getElementById('country').value;
+            const cityi = document.getElementById('city').value;
+            const datee = document.getElementById('datee').value;
+            const montth = document.getElementById('monthEnd').value;
+            const yeari = document.getElementById('yearEnd').value;
+            const lnMail = document.getElementById('lnMail').value;
+
+            status = mifo,
+            loantype = loanType,
+            Amount = loanAmount,
+            Amount2 = loanAmount2,
+            income = incomeMnt,
+            country = countryi,
+            city = cityi,
+            datem = datee,
+            xmonth = montth,
+            kyear = yeari,
+            ymail = lnMail
+
+
+            reLoan(status, loantype, income, country, city, datem, xmonth, kyear, ymail, Amount, Amount2);
+
+            document.getElementById('formiload').style.display = "block";
+            document.getElementById('success-alert').style.display = "block";
+
+           setTimeout(function() {
+            document.getElementById('formiload').style.display = "none";
+           }, 4000);
+
+           setTimeout(function() {
+            document.getElementById('success-alert').style.display = "none";
+           }, 11000);
+
+           setTimeout(function() {
+            document.getElementById('loner').reset();
+           }, 9000);
+        
+
+           
+        }
+   
+
+  //firebase дээр хадглаж байна
+  function reLoan(status, loantype, income, country, city, datem, xmonth, kyear, ymail, Amount, Amount2){
+      const newLoanne = loaneeDetails.push();
+      newLoanne.set({
+          status:status,
+          loantype:loantype,
+          income:income,
+          country:country,
+          city:city,
+          datem:datem,
+          xmonth:xmonth,
+          kyear:kyear,
+          ymail:ymail,
+          Amount:Amount,
+          Amount2:Amount2
+      });
+  }
+
+
+
+
+
+
+    auth.onAuthStateChanged(function(user) {
+       if(user) {
+         var email = user.email;
+        //  alert("Идэвхтэй хэрэглэгч " + email).remove();
+       }
+    //   else {
+    //  alert("Идэвхтэй хэрэглэгч алга")
+    
+    //   }
+    
+  });
+
+  function signOut() {
+
+auth.signOut();
+alert("Signed out");
+window.location = "Login.html";
+}
+</script>
+
+
+<script src="Dash.js"></script>
+</body>
+</html>

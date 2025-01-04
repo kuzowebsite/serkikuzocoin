@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+     <!--  Firebase JS SDK сан холбох андаа -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- <link rel="stylesheet" href="loft.css"> -->
+    <link rel="stylesheet" href="Dashcss.css">
+    <title>Дэлхийн хамгийн найдвартай криптовалютын хөрөнгө оруулалтын платформ</title>
+    <link rel="icon" href="/Images/favico.ico">
+  </head>
+<body>
+
+
+      <!-------topnav эхлэж байна шүүүүүүүүүүүүүүүүүүүүүүүүүүү малааааааааааааааааа-------->
+      <section class="">
+        <div class="topper">
+           <div class="flex justify-center items-center lg:-ml-10 sm:ml-0 ml-8  md:w-1/12 md:w-3/12 w-3/12 mt-6 gdown">             
+
+                <a href="Home.html"><div class="">
+                    <svg class="w-20 h-14 -mt-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="186.847" height="214.403" viewBox="0 0 186.847 214.403">
+                        <defs>
+                        <linearGradient id="linear-gradient" x1="0.5" x2="0.382" y2="0.084" gradientUnits="objectBoundingBox">
+                            <stop offset="0" stop-color="#e4af00"/>
+                            <stop offset="1" stop-color="#b18900"/>
+                        </linearGradient>
+                        </defs>
+                        <g id="Group_5" data-name="Group 5" transform="translate(-16.964 -140.856) rotate(-1)">
+                        <g id="Group_2" data-name="Group 2" transform="translate(12.429 224.859) rotate(-40)">
+                            <path id="Subtraction_6" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+                            <path id="Path_1" data-name="Path 1" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                        </g>
+                        <g id="Group_3" data-name="Group 3" transform="translate(199.654 275.032) rotate(140)">
+                            <path id="Subtraction_6-2" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+                            <path id="Path_2" data-name="Path 2" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                        </g>
+                        </g>
+                    </svg>
+                </div></a>
+                    
+                <a href="Home.html"><div class="text-2xl -mt-2 -ml-3 font-semibold text-white publicsans burron texto">Coinloft</div></a> 
+                <div class="lg:block hidden text-white text-xl text-green-500 cursor-pointer absolute top-8 right-80"><i class="far fa-bell"></i></div>         
+                <div id="fmail" class="lg:block hidden text-white absolute text-lg top-8 right-16 overflow-hidden"></div>                  
+            </div>
+
+           
+         <!--- screen дэлгэц-->
+        <div class="lg:hidden block ">
+          <input type="checkbox" id="openSideMenu" class="openSideMenu">
+          <label for="openSideMenu" class="menuIconToggle mt-2">
+            <div class="hamb-line dia part-1"></div>
+            <div class="hamb-line hor"></div>
+            <div class="hamb-line dia part-2"></div>
+          </label>
+          <div class="berro text-green-500 absolute cursor-pointer text-xl right-20 top-7 "><i class="far fa-bell"></i></div> 
+          <nav>
+            <ul>
+                <a href="Dashboard.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-door-open"></i>
+                    <h1 class="text-lg">Хяналтын самбар</h1>
+                </div></a>
+    
+                <a href="Account.html"><div class="flex gap-4 py-3 bg-white font-medium px-3 mr-4 newneu items-start rounded">  
+                 <i class="fas  text-xl far fa-user"></i>
+                    <h1 class="text-lg">Данс</h1>
+                </div></a>
+    
+                <a href="Transactions.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-coins"></i>
+                    <h1 class="text-lg">Гүйлгээ</h1>
+                </div></a>
+    
+                <a href="Investments.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-wallet"></i>
+                    <h1 class="text-lg">Хөрөнгө оруулалт</h1>
+                </div></a>
+    
+                <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
+                    <h1 class="text-lg">Зээл <span class="text-pink-400 text-xs">(new)</span></h1>
+                </div></a>
+    
+                <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-cog"></i>
+                    <h1 class="text-lg">Тохиргоо</h1>
+                </div></a>
+    
+                <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
+                    <h1 class="text-lg">Гарах</h1>
+                </div>
+            </ul>
+            <div class="nabfoot absolute bottom-0 right-24">
+                <h1 class="ml-14">
+                <i class="text-gray-400 hover:text-red-500 fab fa-twitter"></i>
+                <i class="text-gray-400 hover:text-red-500 fab fa-facebook"></i>
+                </h1>
+              <p class="text-gray-300">Serikbai, KuZo | &copy; 2025</p>
+              </div>
+          </nav>
+        </div>
+    </section>
+
+    <!------------------------ Хажуугийн самбар андаа ойлгож байна ууууууууу -------------------------->
+
+    <section class="h-screen w-3/12 fixed basecolor border-r lg:block hidden pt-20">
+        <div class="w-11/12 mx-auto mt-8">
+
+            <a href="Dashboard.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-door-open"></i>
+                <h1 class="text-lg">Хяналтын самбар</h1>
+            </div></a>
+
+            <a href="Account.html"><div class="flex gap-4 py-3 mt-3 bg-white font-medium px-3 newneu items-start rounded">  
+             <i class="fas  text-xl far fa-user"></i>
+                <h1 class="text-lg">Данс</h1>
+            </div></a>
+
+            <a href="Transactions.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-coins"></i>
+                <h1 class="text-lg">Гүйлгээ</h1>
+            </div></a>
+
+            <a href="Investments.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-wallet"></i>
+                <h1 class="text-lg">Хөрөнгө оруулалт</h1>
+            </div></a>
+
+            <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
+                <h1 class="text-lg">Зээл <span class="text-pink-400 text-xs">(new)</span></h1>
+            </div></a>
+
+            <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-cog"></i>
+                <h1 class="text-lg">Тохиргоо</h1>
+            </div></a>
+
+            <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
+                <h1 class="text-lg">Гарах</h1>
+            </div>
+                        
+
+        </div>
+    </section>
+
+    <section class="md:h-screen h-auto transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
+             
+        <h1 class="sm:text-4xl text-3xl my-6 ">Данс</h1>
+        <div class="border sm:w-10/12 w-full mx-auto py-8 px-4 aknt">
+            <h1 class="text-2xl">Хувийн мэдээлэл</h1>
+            
+           <div class="mx-auto flex md:flex-row flex-col py-8 px-4">
+          
+
+                <form id="contactForm"class="md:w-8/12 w-full">  
+                    <label>Нэр</label>
+                    <div id="nameTest" class="w-full bg-gray-200 py-3 px-2 border mb-3 text-gray-800 font-medium m-auto bg-white text-black"></div>
+                    <label>Овог</label>
+                    <div id="lastTest" class="w-full bg-gray-200 py-3 px-2 border mb-3 text-gray-800 font-medium m-auto bg-white text-black"> </div>
+                    <label>Имэйл</label>
+                    <div  id="mailTest" class="w-full bg-gray-200 py-3 px-2 border mb-3 text-gray-800 font-medium m-auto bg-white text-black"> </div>
+                    <label>Утас</label>
+                    <div id="phone" class="w-full bg-gray-200 py-3 px-2 border mb-3 text-gray-800 font-medium m-auto bg-white text-black"> </div>
+                </form>
+
+                <div class="relative">
+                    
+                <img class="mx-auto" src="https://img.freepik.com/free-vector/profile-interface-concept-illustration_114360-2850.jpg?size=338&ext=jpg">
+                    <div class="bg-gray-200 opacity-20 w-full h-full absolute top-0"></div>
+                </div>
+          </div>
+        </div>
+
+        <div class="hidden notif absolute top-1 md:right-60 right-16 bg-white w-68 py-6 px-3 rounded border text-black">
+            Танд уншигдаагүй мэдэгдлүүд байхгүй байна.
+        </div>
+
+        <section class="left-0 absolute bottom-0 copyright bg-gray-200 py-2 text-gray-500 text-center w-full" >
+            <p class="text-xs pt-3">Copyrights &copy; Бүх эрх хуулиар хамгаалагдсан, 2025 | Serikbai, KuZo зохион бүтээсэн</p>
+        </section>
+    </section>
+   
+
+   
+
+
+
+
+
+
+    <script>
+  // Firebase тохиргоо шүүү андааа
+  var firebaseConfig = {
+    apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+    authDomain: "form-a2fa1.firebaseapp.com",
+    projectId: "form-a2fa1",
+    storageBucket: "form-a2fa1.appspot.com",
+    messagingSenderId: "195902252855",
+    appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+  };
+    // Firebase эхлэж байна
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    auth.onAuthStateChanged(function(user) {
+       if(user) {
+         var email = user.email;
+        //  alert("Active User " + email).remove();
+       }
+    //   else {
+    //  alert("Идэвхтэй хэрэглэгч алга")
+    
+    //   }
+    
+  });
+
+  function signOut() {
+
+auth.signOut();
+alert("Signed out");
+window.location = "Login.html";
+}
+</script>
+
+
+<script src="Dash.js"></script>
+</body>
+</html>
