@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+	
+	
+	
+    <div class="CRYPTOCHART mt-20">
+		<div class="" style="height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #001942; border-radius: 0; text-align: right; line-height:14px; block-size:38px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #ffffff;padding:0;padding: 0px; margin: 0px; width: 100%;">
+			<div style="height:40px; padding:0px; margin:0px; width: 100%;">
+				<iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;">
+				</iframe>
+			</div>
+		</div>
+	   </div>
+   
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="callout-text">
+	<h4>Testimonials</h4>
+	<div class="testimonial-carousel">
+		<!-- Icons8-ын дугуйлсан зүүн 2 дүрс -->
+		<div class="icon-container">
+			<span class="lnr lnr-arrow-left-circle"></span>
+		</div>
+		<div class="testimonial-items">
+			<div class="testimonial-item first">
+				<blockquote>
+					<p class="testimonial-quote">Баярлалаааа.</p>
+					<p class="testimonial-author"><cite>— Bat</cite></p>
+				</blockquote>
+			</div>
+			<div class="testimonial-item second">
+				<blockquote>
+					<p class="testimonial-quote">Үнхээр их баярлалаааа.</p>
+					<p class="testimonial-author"><cite>— Monkhoo</cite></p>
+				</blockquote>
+			</div>
+			<div class="testimonial-item third">
+				<blockquote>
+					<p class="testimonial-quote">Ymar goy ym be bayrlalaa.</p>
+					<p class="testimonial-author"><cite>— Saraa</cite></p>
+				</blockquote>
+			</div>
+		</div>
+		<div class="icon-container">
+			<span class="lnr lnr-arrow-right-circle"></span>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="next-button-container"><button id="button">үргэжилүүлэх >></button></div> -->
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+           (function () {
+	'use strict';
+	var slides = document.querySelectorAll('.testimonial-item'),
+		 button = document.getElementById('button'),
+		 arrows = document.querySelectorAll('.lnr'),
+		 carouselCount = 0,
+		 scrollInterval,
+		 interval = 5000;
+
+	arrows[0].addEventListener('click', function (e) {
+		e = e || window.event;
+		e.preventDefault();
+		carouselCount -= 100;
+		slider();
+		if (e.type !== 'autoClick') {
+			clearInterval(scrollInterval);
+			scrollInterval = setInterval(autoScroll, interval);
+		}
+	});
+	arrows[1].addEventListener('click', sliderEvent);
+	arrows[1].addEventListener('autoClick', sliderEvent);
+	
+	function sliderEvent(e) {
+		e = e || window.event;
+		e.preventDefault();
+		carouselCount += 100;
+		slider();
+		if (e.type !== "autoClick") {
+			clearInterval(scrollInterval);
+			scrollInterval = setInterval(autoScroll, interval);
+		}
+	}
+	
+	function slider() {
+		switch (carouselCount) {
+			case -100:
+				carouselCount = 0;
+				break;
+			case 300:
+				carouselCount = 0;
+				break;
+			default:
+				break;
+		}
+		console.log(carouselCount);
+		for (var i = 0; i < slides.length; i += 1) {
+			slides[i].setAttribute('style', 'transform:translateX(-' + carouselCount + '%)');
+		}
+	}
+	
+	var autoClick = new Event('autoClick');
+	function autoScroll() {
+		arrows[1].dispatchEvent(autoClick);
+	}
+	
+	scrollInterval = setInterval(autoScroll, interval);
+	
+})();
+        </script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+     <!-- Firebase JS SDK холбсон хэсэг -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="loft.css">
+    <link rel="stylesheet" href="hambug.css">
+    <title>Дэлхийн хамгийн найдвартай криптовалютын хөрөнгө оруулалтын платформ</title>
+    <link rel="icon" href="/Images/favico.ico">
+  </head>
+  
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/60761301f7ce1827093a1d7f/1f36jkg0m';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+   
+<body class="bg-gray-100">
+
+    
+
+    <div class="errors alert animate__animated animate__bounceInLeft text-base absolute top-5 lg:w-4/12 sm:w-8/12 w-10/12 left-0 overflow-y-hidden py-2 rounded h-10 bg-red-700 text-white w-full m-auto text-center hidden">
+    </div>
+
+    <div class="goodalert animate__animated animate__bounceInLeft absolute top-5 lg:w-4/12 sm:w-8/12 w-10/12 left-0 overflow-y-hidden h-12 py-6 bg-yellow-300 rounded text-white w-full m-auto text-center hidden">
+      <h1 class="-mt-3 text-lg">Таны мэдээлэл зөв байгааг шалгаарай.</h1>
+    </div>
+
+    <div class="reca w-60 h-32">
+      <a target="_blank" href="https://policies.google.com/privacy?hl=en"><img class="tch" src="/images/tryi.jpg"></a>
+  </div>
+
+  <div class="resalert animate__animated animate__backInDown animate__faster border border-gray-300 absolute mx-auto lg:w-4/12 sm:w-8/12 w-10/12 right-0 top-28 h-auto py-3 bg-white rounded text-black hidden">
+    <h1 class=" md:text-lg text-base px-3 ">
+      Танд имэйл илгээсэн. Нууц үгээ шинэчлэхийн тулд зааврыг дагаарай.
+    </h1>
+  </div>
+
+
+
+
+  <section class="">
+      <div class="toppe">
+        <div class="flex items-center w-7/12 mt-3 gdown">
+
+          <div class="xl:w-2/12 md:w-3/12 pb-2 sm:w-4/12 w-6/12 -mt-2 text-blue-900"> <img class="w-60 h-20" src="/images/toplogo.png" alt="logo">.</div>
+              
+          <a href="Home.html"><div class="text-2xl -mt-12 -ml-6 font-semibold text-white publicsans burron texto">Coinloft</div></a>
+      </div>
+        </div>
+      
+        <input type="checkbox" id="openSideMenu" class="openSideMenu">
+        <label for="openSideMenu" class="menuIconToggle">
+          <div class="hamb-line dia part-1"></div>
+          <div class="hamb-line hor"></div>
+          <div class="hamb-line dia part-2"></div>
+        </label>
+        <nav  class="holder">
+          <ul>
+              <a href="Home.html"><div class="texthov text-white newsticky text-lg border-b border-blue-900 pt-3"> Нүүр</div></a>
+              <a href="Loan.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Зээл</div></a>
+              <a href="About.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Бидний тухай</div></a>
+              <a href="Contact.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Холбоо барих</div></a>
+              <a href="Signup.html"><button class="mt-4 burron publicsans text-white px-4 py-1 rounded">БҮРТГҮҮЛЭХ</button></a>
+          </ul>
+          <div class="nabfoot absolute bottom-0 right-24">
+            <h1 class="ml-14">
+            <i class="text-gray-400 hover:text-red-500 fab fa-twitter"></i>
+            <i class="text-gray-400 hover:text-red-500 fab fa-facebook"></i>
+            </h1>
+          <p class="text-gray-300">Serikbai, KuZo | &copy; 2025</p>
+          </div>
+        </nav>
+
+  </section>
+
+
+  
+
+
+
+    <div class="login-div rounded py-8 shadow h-auto lg:w-3/12 md:w-5/12 sm:w-7/12 w-11/12 m-auto bg-white">
+
+      <div class="sm:w-10/12 w-11/12 m-auto">
+
+        <h1 class="w-full mx-auto text-center text-2xl my-6 publicsans text-gray-500">Нэвтрэх</h1>
+      
+        <form id="register">
+
+              <div class="w-full pt-6">
+                <label>Имэйл</label>
+                <input class="w-full rounded border border-blue-200 py-2 px-3 focus:outline-none text-black" type="text" name="email" id="email"/>
+              </div>
+        
+                <div class="w-full  pt-8">
+                    <div class="flex justify-between">
+                        <label>Нууц үг</label>
+                        <p class="cursor-pointer JPO_open text-base text-blue-700">Нууц үгээ мартсан уу?</p>
+                    </div>
+                  <div class="rounded w-full bg-white px-3 border border-blue-200">
+                    <div class="flex justify-center items-center">
+                        <input class="w-full py-2 focus:outline-none text-black" type="password" name="password" id="password" /><i class=" text-red-500 far fa-eye" id="togglePassword"></i>
+                  </div>
+                    </div>
+                </div>
+
+                <div class="input-group full mt-4 mb-8">
+                <input onclick="signIn()" id="signIn" class="rounded focus:outline-none py-2 w-full sm:text-xl text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="НЭВТРЭХ" class="submit-btn" />
+                <div class="clear"></div>
+                </div>
+     
+        </form>
+          <h1 class="py-2 text-base text-center">Бүртгэлгүй юу? <a class="text-blue-700" href="Signup.html">Бүртгүүлэх</a></h1>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div id="JPO" class="relative bg-white rounded lg:w-4/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
+
+        <div class="sm:w-8/12 w-11/12 mx-auto py-8">
+            <h1 class="text-2xl font-medium pb-4">Нэвтрэх нууц үгийг дахин тохируулах</h1>
+
+            <div class="flex justify-between items-start py-6 bg-yellow-50 gap-4 px-1">
+                <p class=""><i class="text-yellow-400 text-2xl fas fa-exclamation-circle"></i></p>
+                <p class="text-yellow-500">Аюулгүй байдлын үүднээс хамгаалалтын аргыг өөрчилснөөс хойш 24 цагийн дотор мөнгө авахыг зөвшөөрөхгүй.</p>
+            </div>
+
+            <form id="formus">
+                <div class="w-full pt-6">
+                    <label>Имэйл</label>
+                    <input class="w-full rounded border border-blue-200 py-2 px-3 focus:outline-none text-black" type="email" name="email" id="mailres"required/>
+                  </div>
+
+                  <input class="mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="НУУЦ ҮГ ШИНЭЧЛЭХ" class="submit-btn"/>
+            </form>
+        </div>
+     
+        <input type="button" class="JPO_close focus:outline-none absolute top-3 right-6 text-white text-sm rounded-full px-3 py-1" style="background-color: #230fdb;" value="X"/>
+     </div>
+
+
+
+
+
+
+
+
+
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+          $('#JPO').popup();
+ 
+          $.fn.popup.defaults.pagecontainer = '#page';
+     
+        });
+     
+        </script>
+        
+    <script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+    authDomain: "form-a2fa1.firebaseapp.com",
+    projectId: "form-a2fa1",
+    storageBucket: "form-a2fa1.appspot.com",
+    messagingSenderId: "195902252855",
+    appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+  };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+
+    const userRst = firebase.database().ref("reset");
+
+
+
+
+    const regForm = document.querySelector('form#register');
+    const errors_el = document.querySelector('.errors');
+
+    regForm.addEventListener('submit', validateRegisterForm);
+
+    function validateRegisterForm (e) {
+    e.preventDefault();
+    
+    const email = document.querySelector('#register #email');
+    const password = document.querySelector('#register #password');
+    const phone = document.querySelector('#register #phone');
+    
+
+
+    let errors = [];
+    
+    const email_reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const pass_reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    
+    
+    
+    if (email.value == "") {
+    errors.push({text: "email", el: email});
+    } else if (!email_reg.test(email.value)) {
+    errors.push({text: "email", el: email});
+    }
+    
+    if (password.value == "") {
+    errors.push({text: "password", el: password});
+    } else if (!pass_reg.test(password.value)) {
+    errors.push({text: "password", el: password});
+    }
+    
+    if (errors.length > 0) {
+    handle_errors(errors);
+    return false;
+    } 
+  
+      //Alert харуулаж байгаа хэсэг
+      document.querySelector('.goodalert').style.display = 'block';
+
+      setTimeout(function(){
+          document.querySelector('.goodalert').style.display = 'none';
+      },4000);
+
+      
+
+      auth.signInWithEmailAndPassword(email.value, password.value)
+    .then(function(){
+        localStorage.setItem('mailTest', email.value);
+        console.log("Logx-$34567")
+
+        window.location.href = "Dashboard.html";
+        regForm.reset();
+       
+       
+       
+      });
+     
+     
+    return true;
+      
+    
+
+    }
+
+
+            
+
+    function handle_errors(errs) {
+      let str = "Error! Please check your ";
+      
+      errs.map((er) => {
+      er.el.classList.add('error');
+      str += er.text + ", ";
+      });
+      
+      errs[0].el.focus();
+      
+      let error_el = document.createElement('div');
+      error_el.classList.add('error');
+      error_el.innerText = str;
+      
+      error_el.addEventListener('click', function () {
+      errors_el.removeChild(error_el);
+      });
+      
+      errors_el.appendChild(error_el);
+
+
+      document.querySelector('.alert').style.display = 'block';
+
+      setTimeout(function(){
+          document.querySelector('.alert').style.display = 'none';
+      },3000);
+
+    
+    }
+    
+       
+
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+
+        this.classList.toggle('fa-eye-slash');
+    });
+
+
+  </script>
+
+
+
+  <script>
+      document.getElementById('formus').addEventListener('submit', resForm);
+
+    function resForm(e){
+    e.preventDefault();
+    const mainfo = document.getElementById('mailres').value;
+            resUser(email)
+        email = mainfo ;
+        
+        document.querySelector('.resalert').style.display = 'block';
+
+        setTimeout(function(){
+            document.querySelector('.resalert').style.display = 'none';
+        },4000);
+
+
+     resUser(email);
+
+document.getElementById('formus').reset();
+
+}
+
+        function resUser(email){
+        const newRst = userRst.push();
+        newRst.set({
+            email:email
+        });
+    }
+  </script>
+
+
+<script>
+auth.onAuthStateChanged(function(user) {
+       if(user) {
+
+         var email = user.email;
+        //  setTimeout (function(){
+        //  alert("Идэвхтэй хэрэглэгч " + email).remove();
+        //  }, 3000)
+       }
+       
+    
+    //   else {
+    //  alert("Идэвхтэй хэрэглэгч алга")
+    
+    //   }
+
+    
+  });
+
+
+</script>
+
+</body>
+</html>
